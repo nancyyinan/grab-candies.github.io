@@ -1,0 +1,190 @@
+@font-face {
+  font-family: Pacifico;
+  src: url(./fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: Abril Fatface;
+  src: url(./fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./fonts/Poppins/Poppins-Regular.ttf);
+
+}
+@font-face {
+  font-family: Notable;
+  src: url(./fonts/Notable/Notable-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ff1ebc;
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.header-bottom-container:hover {
+  opacity: 0.8; /* Optional hover effect */
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out; 
+  cursor: pointer;
+}
+
+.header-top {
+  font-size: 8rem;
+  padding-left: 80px;
+  text-align: left;
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  justify-content: center;
+}
+
+.header-bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-bottom-container img {
+  margin: auto;
+  padding-top: 35px;
+  padding-right: 50px;
+}
+
+.header-bottom {
+  font-size: 8rem;
+  padding-right: 80px;
+  text-align: right;
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+hr {
+  border: none;
+  border-top: 8px dotted #000;
+  height: 5px;
+  width: 90%;
+  margin: 20px auto; /* 将水平线居中并设置上下外边距 */
+}
+
+.scroll-text {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  background-color: #fff; 
+  color: dodgerblue;
+  padding: 20px;
+  white-space: nowrap; /* 文字保持在一行 */
+  overflow: hidden; /* 超出部分隐藏 */
+  position: relative;
+  height: 100px; 
+  display: flex;
+  align-items: center; /* 确保文字在垂直方向居中 */
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.scroll-content {
+  display: inline-block;
+  position: absolute;
+  animation: scroll 20s linear infinite; 
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); 
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 每行两个格子 */
+  gap: 20px; 
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #ff1ebc; 
+  border: 5px solid white; 
+
+  max-width: 1200px; /* 容器的最大宽度 */
+  margin: 0 auto; /* 居中容器 */
+}
+
+
+.grid-item {
+  background-color: white; 
+  border-radius: 15px; 
+  overflow: hidden; /* 确保内容不超出边界 */
+  display: flex;
+  flex-direction: column; /* 纵向排列 */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 图片自适应方块大小 */
+.grid-item img {
+  max-width: 100%;
+  height: auto; /* 保持图片比例 */
+  object-fit: cover; /* 图片覆盖方块，保持比例 */
+  border-radius: 15px; 
+}
+
+
+.text-content {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.text-content h2 {
+  font-size: 1.5rem;
+  margin: 10px ;
+  color: black;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  margin: 5px ;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.add-to-cart a {
+  text-decoration: none; /* 去除下划线 */
+  color: white; /* 设置字体为白色 */
+  display: inline-block; /* 让 a 标签行为类似按钮 */
+}
+
+.add-to-cart {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #ff1ebc;
+}
+
+

@@ -1,0 +1,94 @@
+@font-face {
+  font-family: Pacifico;
+  src: url(./fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: Abril Fatface;
+  src: url(./fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./fonts/Poppins/Poppins-Thin.ttf);
+}
+@font-face {
+  font-family: Notable;
+  src: url(./fonts/Notable/Notable-Regular.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffde32;
+}
+
+.intro {
+  text-align: center;
+  font-size: 100px;
+  background-color: #ffde32;
+  font-family: "Notable";
+}
+
+.nav-icon {
+  position: fixed;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.nav-icon img {
+  width: 100px; /* Adjust size as needed */
+  transition: transform 0.6s ease;
+}
+
+.nav-icon img:hover {
+  opacity: 0.8; /* Optional hover effect */
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out; 
+}
+
+.shell {
+  height: 100vh;
+  overflow-x: hidden;
+  perspective: 8px;
+}
+
+.shell div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shell h1 {
+  font-size: 150px;
+}
+
+.image {
+  transform: translateZ(-3px) scale(1.6);
+  background-size: cover;
+  height: 100vh;
+  z-index: -1;
+}
+
+.text {
+  height: 50vh;
+  background-color: #ffde32;
+  text-align: center;
+}
+.text h1 {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 100px;
+}
+
+.heading {
+  z-index: -1;
+  transform: translateY(-30vh) translateZ(-1px);
+  color: #ffde32;
+  font-family: "Pacifico";
+  font-size: 200px;
+}

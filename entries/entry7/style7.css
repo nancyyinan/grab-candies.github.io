@@ -1,0 +1,165 @@
+@font-face {
+    font-family: Abril Fatface;
+    src: url(./fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
+}
+  @font-face {
+    font-family: Poppins;
+    src: url(./fonts/Poppins/Poppins-Thin.ttf);
+  }
+  @font-face {
+    font-family: Notable;
+    src: url(./fonts/Notable/Notable-Regular.ttf);
+  }
+
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-logo {
+    max-width: 150px; /* Adjust the size of the image */
+    height: auto;
+    cursor: pointer;
+}
+
+.nav-logo:hover {
+    opacity: 0.8; /* Optional hover effect */
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.container {
+    
+    gap: 50px;
+    columns: 3 300px;
+    column-gap: 1em;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100vw; /* Ensure the container doesn't exceed the viewport width */
+    overflow: hidden;
+}
+
+.widget {
+    background-color: #F6F6F1;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%; /* Ensure widget doesn't exceed container width */
+    overflow: hidden; /* Hide content that exceeds the widget size */
+}
+
+#widget-1{
+    background-color: #9389AB;
+}
+
+#widget-2{
+    background-color: #FF6521;
+}
+
+#widget-4{
+    background-color: #D8E5D5;
+}
+
+#widget-5{
+    background-color: #9389AB;
+}
+
+#widget-7{
+    background-color: #C5CC23;
+}
+
+#widget-9{
+    background-color: #FF6521;
+}
+
+#widget-10{
+    background-color: #D8E5D5;
+}
+
+#widget-11{
+    background-color: #FF6521;
+}
+
+#widget-12{
+    background-color: #9389AB;
+}
+
+#widget-13{
+    background-color: #D8E5D5;
+}
+
+
+.title {
+    font-family: "Abril Fatface";
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.text p {
+    font-family: "Poppins";
+    font-size: 1.1rem;
+    color: #000000;
+    padding: 20px;
+}
+
+.image:hover {
+    transform: translateY(-10px); /* Moves the widget 10px up */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out, opacity 2s ease-in-out; /* Smooth transition */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.8;
+        transform: scale(0.7); 
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(0.7); 
+    }
+}
+
+.image img {
+    animation: fadeInOut 2s infinite; /* Change duration as needed */
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    body {
+        background-color: #FFA500;
+    }
+
+    .container {
+        grid-template-rows: repeat(9, auto);
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+}
