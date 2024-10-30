@@ -40,9 +40,8 @@ a{
 }
 
 .header-top {
-  font-size: 8rem;
-  padding-left: 80px;
-  text-align: left;
+  font-size: 8vw;
+  text-align: center;
   font-family: "Notable", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -62,12 +61,10 @@ a{
 }
 
 .header-bottom {
-  font-size: 8rem;
+  font-size: 8vw;
   padding-right: 80px;
-  text-align: right;
+  text-align: center;
   font-family: "Notable", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 hr {
@@ -187,4 +184,37 @@ hr {
   background-color: #ff1ebc;
 }
 
+@media (max-width: 768px) {
+  .header-bottom-container img {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 27px;
+    padding-left: 20px;
+    width: 150px;
+  }
+  
+  .header-bottom {
+    font-size: 8vw;
+    padding-right: 80px;
+    text-align: center;
+    font-family: "Notable", sans-serif;
+  }
 
+  .scroll-text {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    background-color: #fff; 
+    color: dodgerblue;
+    padding: 20px;
+    white-space: nowrap; /* 文字保持在一行 */
+    overflow: hidden; /* 超出部分隐藏 */
+    position: relative;
+    height: 40px; 
+    display: flex;
+    align-items: center; /* 确保文字在垂直方向居中 */
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
