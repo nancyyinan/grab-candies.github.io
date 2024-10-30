@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: Poppins;
-  src: url(./fonts/Poppins/Poppins-Thin.ttf);
+  src: url(./fonts/Poppins/Poppins-Regular.ttf);
 }
 @font-face {
   font-family: Notable;
@@ -140,15 +140,15 @@ p {
   background-color: #1e90ff;
 }
 
-@media (max-width: 1268px){
+@media (max-width: 1268px) {
   .content {
-    background: linear-gradient(to right, #FFDE32, #FF1EBC, #1E90FF);
+    background: linear-gradient(to right, #ffde32, #ff1ebc, #1e90ff);
     transition: background 0.6s ease;
   }
-  .content p{
+  .content p {
     color: #ffffff;
   }
-  .content h1{
+  .content h1 {
     color: #ffffff;
   }
 }
