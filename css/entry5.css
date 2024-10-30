@@ -1,0 +1,192 @@
+@font-face {
+  font-family: Abril Fatface;
+  src: url(../fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
+}
+@font-face {
+  font-family: Pacifico;
+  src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Notable;
+  src: url(../fonts/Notable/Notable-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  /* Make sure the container takes full viewport height */
+}
+
+/* Main content styling */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+}
+
+h1 {
+  font-family: "Notable";
+  font-size: 6em;
+}
+
+p {
+  font-family: "Poppins";
+  font-size: 1.2em;
+}
+
+.image-content {
+  flex: 0 0 150px; /* Adjust this to fit your image size */
+  position: relative;
+}
+
+.image-content img {
+  width: 150px; /* Adjust to your image size */
+  height: auto;
+  position: absolute; /* Change to absolute positioning */
+  top: 8%; /* Place the badge at the bottom */
+  transition: transform 0.6s ease; /* Smooth transition for image movement */
+}
+
+.image-content2 {
+  flex: 0 0 150px; /* Adjust this to fit your image size */
+  position: relative;
+}
+
+.image-content2 img {
+  width: 150px; /* Adjust to your image size */
+  height: auto;
+  position: absolute; /* Change to absolute positioning */
+  top: 40%; /* Place the badge at the bottom */
+  transition: transform 0.6s ease; /* Smooth transition for image movement */
+}
+
+.image-content3 {
+  flex: 0 0 150px; /* Adjust this to fit your image size */
+  position: relative;
+}
+
+.image-content3 img {
+  width: 150px; /* Adjust to your image size */
+  height: auto;
+  position: absolute; /* Change to absolute positioning */
+  top: 75%; /* Place the badge at the bottom */
+  transition: transform 0.6s ease; /* Smooth transition for image movement */
+}
+
+/* Hover effect on the image */
+.image-content img:hover {
+  transform: rotate(360deg); /* Adjust the movement */
+}
+
+.image-content2 img:hover {
+  transform: rotate(360deg); /* Adjust the movement */
+}
+.image-content3 img:hover {
+  transform: rotate(360deg); /* Adjust the movement */
+}
+
+/* Vertical tab styling */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 280px;
+  height: 100vh; /* Ensure the tabs take full height of the viewport */
+}
+
+.tab {
+  flex: 1; /* Make sure each tab takes equal height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Abril Fatface";
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background-color: white;
+  position: relative;
+  transition: transform 0.7s ease, width 0.7s ease; /* Smooth transition */
+}
+
+.tab:hover {
+  transform: scale(1); /* Increase size on hover */
+  width: 280px; /* Increase the width on hover */
+}
+
+.tab a {
+  text-decoration: none; /* 去除下划线 */
+  color: white;
+}
+
+.tab:nth-child(1) {
+  background-color: #ffde32;
+}
+.tab:nth-child(2) {
+  background-color: #ff1ebc;
+}
+.tab:nth-child(3) {
+  background-color: #1e90ff;
+}
+
+@media (max-width: 1268px) {
+  .content {
+    background: linear-gradient(to right, #ffde32, #ff1ebc, #1e90ff);
+    transition: background 0.6s ease;
+  }
+  .content p {
+    color: #ffffff;
+  }
+  .content h1 {
+    color: #ffffff;
+  }
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack tabs and content vertically on mobile */
+  }
+
+  .content h1 {
+    font-family: "Notable";
+    font-size: 3.3em;
+  }
+
+  .tabs {
+    flex-direction: row;
+    width: 100%;
+    height: 180px; /* Horizontal tabs will take full width */
+  }
+  .tab {
+    writing-mode: horizontal-tb;
+    transform: rotate(360deg);
+    flex: 1;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .tab a {
+    color: #ffffff;
+  }
+
+  .image-content2 img {
+    top: 2%; /* Place the badge at the bottom */
+    left: 35%;
+  }
+  .image-content3 img {
+    top: 2%;
+    left: 68%; /* Place the badge at the bottom */
+  }
+}
